@@ -18,6 +18,8 @@
     undo-tree				; undo-tree-mode
     projectile				; projects manager
     exec-path-from-shell		; ensure GUI emacs uses my env var
+    yaml-mode				; yaml mode for emacs
+    solarized-theme			; eye no hurting theme
     ) "important package to install")
 
 ;; check if packages are installed and install them if not
@@ -39,6 +41,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(grep-command "egrep -nrIH --exclude-dir=\".git\"")
  '(inhibit-default-init t)
  '(inhibit-startup-screen t)
@@ -60,3 +65,6 @@
 ;; var environmnet initialization
 (when (memq window-system '(x mac ns))
   (exec-path-from-shell-initialize))
+
+;; theme
+(load-theme 'solarized-dark)
