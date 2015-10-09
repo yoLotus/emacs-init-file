@@ -20,10 +20,15 @@
     exec-path-from-shell		; ensure GUI emacs uses my env var
     yaml-mode				; yaml mode for emacs
     solarized-theme			; eye no hurting theme
+    rvm 				; rmv integration for emacs
+    yasnippet				; yet anothers snippets
+    helm-projectile			; helm integration for projectile
+    browse-kill-ring+			; browse the kill ring nicely
     ) "important package to install")
 
 ;; check if packages are installed and install them if not
 (dolist (package eb-packages)
+  (print eb-packages)
   (progn
     (if (not (package-installed-p package))
 	(package-install package))))
@@ -33,8 +38,8 @@
 (electric-pair-mode 1)
 
 ;; personal functions
-(add-to-list 'load-path "~/.emacs.d/eb-functions.el")
-(load-file "~/.emacs.d/eb-functions.el")
+(add-to-list 'load-path "~/.emacs.d/emacs-init-file/eb-functions.el")
+(load-file "~/.emacs.d/emacs-init-file/eb-functions.el")
 (put 'dired-find-alternate-file 'disabled nil)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -68,3 +73,8 @@
 
 ;; theme
 (load-theme 'solarized-dark)
+
+;; projectile
+(projectile-global-mode)
+(require 'helm-projectile)
+(helm-projectile-on)
