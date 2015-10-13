@@ -78,3 +78,6 @@
 (projectile-global-mode)
 (require 'helm-projectile)
 (helm-projectile-on)
+
+;; suspend-frame binded just with "C-x C-z"
+(global-unset-key (kbd "C-z"))
