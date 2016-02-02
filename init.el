@@ -24,6 +24,8 @@
     yasnippet				; yet anothers snippets
     helm-projectile			; helm integration for projectile
     browse-kill-ring+			; browse the kill ring nicely
+    neotree				; tree mode
+    comment-dwim-2			; comment line or end of line
     ) "important package to install")
 
 ;; check if packages are installed and install them if not
