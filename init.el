@@ -88,8 +88,13 @@
 (setq projectile-switch-project-action 'neotree-projectile-action)
 
 (global-set-key (kbd "M-;") 'comment-dwim-2)
+(global-set-key (kbd "M-_") 'text-scale-decrease)
+(global-set-key (kbd "M-+") 'text-scale-increase)
 
 (global-set-key (kbd "C-c o") '(lambda () "DOCSTRING" (interactive) (other-window -1)))
 
 (add-hook 'before-save-hook '(lambda () "Delete all trailing whitespace before saving"
 			       (delete-trailing-whitespace)))
+
+;; prevent in ruby-mode to insert encoding comment while saving
+(setq ruby-insert-encoding-magic-comment nil)
