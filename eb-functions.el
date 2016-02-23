@@ -9,19 +9,19 @@
 
 (defun escape-regex-char (arg1)
   " escape all regex char in a string. ex: $http.get( -> \\\$http\.get\("
-  
+
   (setq string-regex (regexp-quote arg1))
-  
+
   (setq string-in (split-string string-regex "" t))
   (setq string-out "")
 
   ;; du to regex intern emacs, $ is annoying and post-processing must
-  ;; be applied : 
-  
+  ;; be applied :
+
   (while string-in
 
     (setq the-char (car string-in))
-    
+
     (if (string-match-p "[$]" the-char)
     	(setq string-out (concat string-out "\\\\" the-char))
       (setq string-out (concat string-out the-char)))
@@ -36,7 +36,7 @@ point on a symbol you want to grep and call this function. All
 means of search occurences are the same as the usual grep
 command. if the region is active call the grep on region."
 
-  (interactive   
+  (interactive
    (let (
 	 (sy (if (region-active-p) (buffer-substring (point) (mark)) (symbol-at-point)))
 	 val
@@ -52,3 +52,29 @@ command. if the region is active call the grep on region."
     (if (not (file-exists-p dir))
 	(message "You specified a wrong grep dir")
       (grep (concat grep-command " \"" (escape-regex-char (if (region-active-p) (buffer-substring (point) (mark)) (symbol-name (symbol-at-point)))) "\" " dir)))))
+
+
+(defun copy-line ()
+    (interactive)
+  (save-excursion
+    (let (_begin _end)
+      (beginning-of-line)
+      (setq _begin (point))
+      (end-of-line)
+      (setq _end (point))
+      (kill-ring-save _begin _end)))
+  )
+
+(defun repeat-line ()
+  (interactive)
+  (let (
+	(_col (current-column))
+	)
+    (copy-line)
+    (end-of-line)
+    (newline)
+    (yank)
+    (move-to-column _col))
+  )
+
+(global-set-key (kbd "M-RET") 'repeat-line)
