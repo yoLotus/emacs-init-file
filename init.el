@@ -98,3 +98,5 @@
 
 ;; prevent in ruby-mode to insert encoding comment while saving
 (setq ruby-insert-encoding-magic-comment nil)
+
+(yas-global-mode 1)
