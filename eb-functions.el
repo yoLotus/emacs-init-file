@@ -78,3 +78,10 @@ command. if the region is active call the grep on region."
   )
 
 (global-set-key (kbd "M-RET") 'repeat-line)
+
+(defun select-and-remove-tild-files ()
+  (interactive)
+  (progn (dired-flag-files-regexp ".*~$")
+	 (dired-do-flagged-delete)))
+
+(define-key dired-mode-map (kbd "<f1>") 'select-and-remove-tild-files)
