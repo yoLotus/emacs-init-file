@@ -85,3 +85,15 @@ command. if the region is active call the grep on region."
 	 (dired-do-flagged-delete)))
 
 (define-key dired-mode-map (kbd "<f1>") 'select-and-remove-tild-files)
+
+
+(defun switch-to-brouillon-buffer ()
+  "Switch to my personal brouillon (draft in french) buffer to
+  make anything inside. I want to keep my *scratch* buffer
+  exclusively for lisp interaction"
+  (interactive)
+  (if (get-buffer "brouillon")
+      (switch-to-buffer "brouillon")
+    (message "No brouillon buffer")))
+
+(global-set-key (kbd "<f8>") 'switch-to-brouillon-buffer)
