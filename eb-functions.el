@@ -92,8 +92,6 @@ command. if the region is active call the grep on region."
   make anything inside. I want to keep my *scratch* buffer
   exclusively for lisp interaction"
   (interactive)
-  (if (get-buffer "brouillon")
-      (switch-to-buffer "brouillon")
-    (message "No brouillon buffer")))
+  (switch-to-buffer "brouillon"))
 
 (global-set-key (kbd "<f8>") 'switch-to-brouillon-buffer)
