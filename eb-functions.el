@@ -84,6 +84,7 @@ command. if the region is active call the grep on region."
   (progn (dired-flag-files-regexp ".*~$")
 	 (dired-do-flagged-delete)))
 
+(require 'dired)
 (define-key dired-mode-map (kbd "<f1>") 'select-and-remove-tild-files)
 
 
