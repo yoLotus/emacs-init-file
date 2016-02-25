@@ -100,3 +100,4 @@
 (setq ruby-insert-encoding-magic-comment nil)
 
 (yas-global-mode 1)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
