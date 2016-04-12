@@ -10,6 +10,7 @@
   '(
     highlight-symbol			; highlight symbol
     magit				; git wrap-up
+    git-gutter				; show in the buffer git diff
     ruby-mode				; ruby handler
     rinari				; rails IDE (in fact not)
     js2-mode				; javascript
@@ -26,6 +27,7 @@
     browse-kill-ring+			; browse the kill ring nicely
     neotree				; tree mode
     comment-dwim-2			; comment line or end of line
+    dockerfile-mode			; mode to edit Dockerfile
     ) "important package to install")
 
 ;; check if packages are installed and install them if not
@@ -85,7 +87,6 @@
 (global-unset-key (kbd "C-z"))
 
 (global-set-key (kbd "M-\\") 'neotree-toggle)
-(setq projectile-switch-project-action 'neotree-projectile-action)
 
 (global-set-key (kbd "M-;") 'comment-dwim-2)
 (global-set-key (kbd "M-_") 'text-scale-decrease)
@@ -101,3 +102,4 @@
 
 (yas-global-mode 1)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(global-git-gutter-mode +1)
