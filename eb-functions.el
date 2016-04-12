@@ -55,7 +55,7 @@ command. if the region is active call the grep on region."
 
 
 (defun copy-line ()
-    (interactive)
+  (interactive)
   (save-excursion
     (let (_begin _end)
       (beginning-of-line)
@@ -96,3 +96,14 @@ command. if the region is active call the grep on region."
   (switch-to-buffer "brouillon"))
 
 (global-set-key (kbd "<f8>") 'switch-to-brouillon-buffer)
+
+;; only for js-2 mode
+(defun put-this-before ()
+  "add this before word in js file"
+  (interactive)
+  (save-excursion
+    (progn (backward-word)
+	   (insert "this."))))
+
+(require 'js2-mode)
+(define-key js2-mode-map (kbd "C-c t") #'put-this-before)
