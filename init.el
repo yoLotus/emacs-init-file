@@ -10,7 +10,7 @@
   '(
     highlight-symbol			; highlight symbol
     magit				; git wrap-up
-    git-gutter				; show in the buffer git diff
+    git-gutter+				; show in the buffer git diff
     ruby-mode				; ruby handler
     rinari				; rails IDE (in fact not)
     js2-mode				; javascript
@@ -102,4 +102,4 @@
 
 (yas-global-mode 1)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(global-git-gutter-mode +1)
+(global-git-gutter+-mode +1)
