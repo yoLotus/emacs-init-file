@@ -142,3 +142,7 @@
 
 ;; git gutter
 (global-set-key (kbd "C-c TAB") 'git-gutter+-show-hunk-inline-at-point)
+
+;; hooks
+(add-hook 'ruby-mode-hook (lambda () "active ruby tools for ruby mode"
+			    (ruby-tools-mode 1)))
