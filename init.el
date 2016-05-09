@@ -70,7 +70,6 @@
 (put 'narrow-to-region 'disabled nil)
 
 ;; personal keystrokes
-(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; var environmnet initialization
 (when (memq window-system '(x mac ns))
