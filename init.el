@@ -35,6 +35,9 @@
     json-mode				; yes handle json is prety convenient
     vagrant				; I should start to use is
     zencoding-mode			; code html with style
+    cider				; clojure heaven
+    inf-clojure				; sub process clojure
+    marldown-mode			; write markdown
     ) "important package to install")
 
 ;; check if packages are installed and install them if not
@@ -51,6 +54,7 @@
 ;; personal functions
 (add-to-list 'load-path "~/.emacs.d/emacs-init-file/eb-functions.el")
 (load-file "~/.emacs.d/emacs-init-file/eb-functions.el")
+(load-file "~/.emacs.d/emacs-init-file/vendor-functions.el")
 (put 'dired-find-alternate-file 'disabled nil)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -186,3 +190,11 @@
               (setq flycheck-check-syntax-automatically '(save mode-enabled))
               (eldoc-mode +1)
               (company-mode-on))))
+
+;;
+(delete-selection-mode 1)
+
+(require 'tide)
+(if (fboundp 'tide-format-before-save)
+    (remove-hook 'before-save-hook 'tide-format-before-save)
+  (message "tide mode not defined yet"))
