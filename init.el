@@ -205,3 +205,6 @@
 (if (fboundp 'tide-format-before-save)
     (remove-hook 'before-save-hook 'tide-format-before-save)
   (message "tide mode not defined yet"))
+
+;; kill current buffer without prompting
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
