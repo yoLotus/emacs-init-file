@@ -1,5 +1,9 @@
 ;; init file etienne bazin
 
+;; rebind meta key if running on Mac OS X
+(if (string= system-type "darwin")
+    (setq mac-command-modifier 'meta))
+
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/") t)
