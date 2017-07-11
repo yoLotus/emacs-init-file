@@ -61,7 +61,7 @@
 ;; personal functions
 (add-to-list 'load-path "~/.emacs.d/emacs-init-file/eb-functions.el")
 (load-file "~/.emacs.d/emacs-init-file/eb-functions.el")
-(load-file "~/.emacs.d/emacs-init-file/vendor-functions.el")
+; (load-file "~/.emacs.d/emacs-init-file/vendor-functions.el")
 (put 'dired-find-alternate-file 'disabled nil)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
