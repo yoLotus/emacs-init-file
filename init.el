@@ -208,3 +208,6 @@
 
 ;; kill current buffer without prompting
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+;; iedit
+(global-set-key (kbd "C-c i") 'iedit-mode)
