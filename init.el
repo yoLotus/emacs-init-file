@@ -41,12 +41,15 @@
     zencoding-mode			; code html with style
     cider				; clojure heaven
     inf-clojure				; sub process clojure
-    marldown-mode			; write markdown
+    ; marldown-mode			; write markdown
+    iedit				; edit multiple region in one time
     ) "important package to install")
+
+
+(package-refresh-contents)
 
 ;; check if packages are installed and install them if not
 (dolist (package eb-packages)
-  (print eb-packages)
   (progn
     (if (not (package-installed-p package))
 	(package-install package))))
