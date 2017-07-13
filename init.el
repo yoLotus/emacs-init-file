@@ -45,6 +45,7 @@
     inf-clojure				; sub process clojure
     ; marldown-mode			; write markdown
     iedit				; edit multiple region in one time
+    rjsx-mode				; jsx over js2-mode
     ) "important package to install")
 
 
