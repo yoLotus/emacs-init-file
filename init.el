@@ -214,3 +214,13 @@
 
 ;; iedit
 (global-set-key (kbd "C-c i") 'iedit-mode)
+
+;; indentation
+(setq-default indent-tabs-mode nil)
+(setq json-reformat:indent-width 2)
+(setq js2-basic-offset 2)
+
+;; git-gutter+ keystrokes
+(global-set-key (kbd "C-c g n") 'git-gutter+-next-hunk)
+(global-set-key (kbd "C-c g p") 'git-gutter+-previous-hunk)
+(global-set-key (kbd "C-c g r") 'git-gutter+-revert-hunk)
