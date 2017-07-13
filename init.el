@@ -1,8 +1,10 @@
 ;; init file etienne bazin
 
 ;; rebind meta key if running on Mac OS X
-(if (string= system-type "darwin")
-    (setq mac-command-modifier 'meta))
+(if (eq system-type 'darwin)
+    (progn
+      (setq mac-command-modifier 'meta)
+      (setq mac-right-option-modifier 'none)))
 
 (require 'package)
 (add-to-list 'package-archives
