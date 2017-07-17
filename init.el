@@ -46,6 +46,7 @@
     ; marldown-mode			; write markdown
     iedit				; edit multiple region in one time
     rjsx-mode				; jsx over js2-mode
+    evil-numbers                        ; some evil inside Emacs heaven for numbers
     ) "important package to install")
 
 
@@ -224,3 +225,7 @@
 (global-set-key (kbd "C-c g n") 'git-gutter+-next-hunk)
 (global-set-key (kbd "C-c g p") 'git-gutter+-previous-hunk)
 (global-set-key (kbd "C-c g r") 'git-gutter+-revert-hunk)
+
+;;
+(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
