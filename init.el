@@ -121,7 +121,6 @@
 (setq ruby-insert-encoding-magic-comment nil)
 
 (yas-global-mode 1)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (global-git-gutter+-mode +1)
 
 
@@ -217,8 +216,9 @@
 
 ;; indentation
 (setq-default indent-tabs-mode nil)
-(setq json-reformat:indent-width 2)
-(setq js2-basic-offset 2)
+
+;; js configuration
+(load-file "~/.emacs.d/emacs-init-file/eb-js-mode.el")
 
 ;; git-gutter+ keystrokes
 (global-set-key (kbd "C-c g n") 'git-gutter+-next-hunk)

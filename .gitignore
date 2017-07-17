@@ -2,3 +2,4 @@
 !init.el
 !.gitignore
 !eb-functions.el
+!eb-js-mode.el
