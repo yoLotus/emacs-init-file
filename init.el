@@ -232,3 +232,8 @@
 ;;
 (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+
+;; rest client
+(add-to-list 'auto-mode-alist '("\\.erc$" . restclient-mode))
+
+;;; init.el ends here
