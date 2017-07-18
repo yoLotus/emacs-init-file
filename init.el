@@ -43,10 +43,13 @@
     zencoding-mode			; code html with style
     cider				; clojure heaven
     inf-clojure				; sub process clojure
-    ; marldown-mode			; write markdown
+    markdown-mode			; write markdown
     iedit				; edit multiple region in one time
     rjsx-mode				; jsx over js2-mode
     evil-numbers                        ; some evil inside Emacs heaven for numbers
+    restclient                          ; REST client
+    haml-mode                           ; haml mode for rails views
+    powerline                           ; fancy buffer info theme
     ) "important package to install")
 
 
