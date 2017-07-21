@@ -50,6 +50,8 @@
     restclient                          ; REST client
     haml-mode                           ; haml mode for rails views
     powerline                           ; fancy buffer info theme
+    go-mode                             ; golang mode
+    all-the-icons                       ; fancy icons to shiny emacs
     ) "important package to install")
 
 
@@ -235,5 +237,8 @@
 
 ;; rest client
 (add-to-list 'auto-mode-alist '("\\.erc$" . restclient-mode))
+
+;; neotree tries to use all-the-icons as theme
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;;; init.el ends here
