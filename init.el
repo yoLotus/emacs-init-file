@@ -241,4 +241,8 @@
 ;; neotree tries to use all-the-icons as theme
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
+;; magit
+(require 'magit)
+(define-key magit-log-mode-map (kbd "C-c SPC") #'magit-checkout) ; add new key in log mode
+
 ;;; init.el ends here
