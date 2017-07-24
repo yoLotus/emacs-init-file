@@ -1,10 +1,11 @@
 ;; init file etienne bazin
 
-;; rebind meta key if running on Mac OS X
+;; rebind meta key if running on Mac OS X and other special characters
 (if (eq system-type 'darwin)
     (progn
       (setq mac-command-modifier 'meta)
-      (setq mac-right-option-modifier 'none)))
+      (setq mac-right-option-modifier 'none)
+      (global-set-key (kbd "M-n") '(lambda () (interactive) (insert "~")))))
 
 (require 'package)
 (add-to-list 'package-archives
