@@ -231,6 +231,7 @@
 (global-set-key (kbd "C-c g n") 'git-gutter+-next-hunk)
 (global-set-key (kbd "C-c g p") 'git-gutter+-previous-hunk)
 (global-set-key (kbd "C-c g r") 'git-gutter+-revert-hunk)
+(global-set-key (kbd "C-c g s") 'git-gutter+-show-hunk-inline-at-point)
 
 ;;
 (global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
