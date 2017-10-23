@@ -56,7 +56,7 @@
     ) "important package to install")
 
 
-(package-refresh-contents)
+(package-refresh-contents t)
 
 ;; check if packages are installed and install them if not
 (dolist (package eb-packages)
