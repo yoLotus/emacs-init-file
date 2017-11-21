@@ -59,3 +59,9 @@
 
 ;; adjust indents generaly
 (setq css-indent-offset 2)
+
+;; prettier
+(setq prettier-js-args '(
+  "--no-semi" "true"
+  "--single-quote" "true"
+))
