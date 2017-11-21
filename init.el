@@ -247,4 +247,10 @@
 (require 'magit)
 (define-key magit-log-mode-map (kbd "C-c SPC") #'magit-checkout) ; add new key in log mode
 
+;; try helm for find-file
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+
+;; dired
+(global-set-key (kbd "C-x C-j") #'dired-jump)
+
 ;;; init.el ends here
