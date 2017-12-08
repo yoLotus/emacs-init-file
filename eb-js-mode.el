@@ -65,3 +65,6 @@
   "--no-semi" "true"
   "--single-quote" "true"
 ))
+
+;; switch/case indentation
+(setq js-switch-indent-offset 2)
