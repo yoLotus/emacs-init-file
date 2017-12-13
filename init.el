@@ -113,7 +113,7 @@
 ;; suspend-frame binded just with "C-x C-z"
 (global-unset-key (kbd "C-z"))
 
-(global-set-key (kbd "M-\\") 'neotree-toggle)
+(global-set-key (kbd "C-,") 'neotree-toggle)
 
 (global-set-key (kbd "M-;") 'comment-dwim-2)
 (global-set-key (kbd "M-_") 'text-scale-decrease)
