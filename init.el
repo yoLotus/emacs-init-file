@@ -253,4 +253,6 @@
 ;; dired
 (global-set-key (kbd "C-x C-j") #'dired-jump)
 
+(setq confirm-kill-emacs 'yes-or-no-p)
+
 ;;; init.el ends here
