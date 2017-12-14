@@ -53,6 +53,7 @@
     powerline                           ; fancy buffer info theme
     go-mode                             ; golang mode
     all-the-icons                       ; fancy icons to shiny emacs
+    graphql-mode                        ; mode for graphql DSL
     ) "important package to install")
 
 
